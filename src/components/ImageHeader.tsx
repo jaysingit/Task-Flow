@@ -9,11 +9,23 @@ export default function ImageHeader() {
         Task Flow
       </h1>
       <div className="flex items-center justify-center">
-        <img className="w-20 h-28 object-contain" src={reactsvg} alt=""></img>
+        <img
+          className="w-20 h-28 object-contain"
+          src={reactsvg}
+          alt="React"
+        ></img>
         <span className="mx-5"> + </span>
-        <img className="w-20 h-28 object-contain" src={tssvg} alt=""></img>
+        <img
+          className="w-20 h-28 object-contain"
+          src={tssvg}
+          alt="TypeScript"
+        ></img>
         <span className="mx-5"> + </span>
-        <img className="w-20 h-28 object-contain" src={vitesvg} alt=""></img>
+        <img
+          className="w-20 h-28 object-contain"
+          src={vitesvg}
+          alt="Vite"
+        ></img>
       </div>
     </>
   );
