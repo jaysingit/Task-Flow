@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import App from "../App";
 
 function getInput() {
-  return screen.getByPlaceholderText("Enter the task.....");
+  return screen.getByPlaceholderText("Please enter the task here.");
 }
 
 function getAddButton() {
