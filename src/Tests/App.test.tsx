@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
-import Button from "../components/Button";
 
 function getInput() {
   return screen.getByPlaceholderText("Enter the task.....");
@@ -9,10 +8,6 @@ function getInput() {
 
 function getAddButton() {
   return screen.getByRole("button", { name: "Add" });
-}
-
-function getResetButton() {
-  return screen.getByRole("button", { name: "Reset" });
 }
 
 describe("App", () => {
