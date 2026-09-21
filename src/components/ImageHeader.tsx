@@ -1,7 +1,17 @@
+import { Fragment } from "react";
 import reactsvg from "../assets/react.svg";
 import tssvg from "../assets/typescript.svg";
 import vitesvg from "../assets/vite.svg";
+import tailwindcss from "../assets/tailwind-css.svg";
 import Clock from "./Clock";
+import Logo from "./Logo";
+
+const logos = [
+  { src: reactsvg, name: "React" },
+  { src: tssvg, name: "TypeScript" },
+  { src: tailwindcss, name: "Tailwind CSS" },
+  { src: vitesvg, name: "Vite" },
+];
 
 export default function ImageHeader() {
   return (
@@ -11,23 +21,12 @@ export default function ImageHeader() {
       </h1>
       <Clock></Clock>
       <div className="flex items-center justify-center">
-        <img
-          className="w-20 h-28 object-contain"
-          src={reactsvg}
-          alt="React"
-        ></img>
-        <span className="mx-5"> + </span>
-        <img
-          className="w-20 h-28 object-contain"
-          src={tssvg}
-          alt="TypeScript"
-        ></img>
-        <span className="mx-5"> + </span>
-        <img
-          className="w-20 h-28 object-contain"
-          src={vitesvg}
-          alt="Vite"
-        ></img>
+        {logos.map(({ src, name }, index) => (
+          <Fragment key={name}>
+            {index > 0 && <span className="mx-5"> + </span>}
+            <Logo src={src} name={name} />
+          </Fragment>
+        ))}
       </div>
     </>
   );
