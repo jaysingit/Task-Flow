@@ -15,7 +15,7 @@ export default function ItemList({ items, setItems }: ItemList) {
     <div
       key={data.id}
       className="flex justify-between items-center
-                bg-gray-200 rounded-sm p-1 border-2"
+                bg-blue-100 rounded-sm p-1 border-2"
     >
       <p className="font-black">
         {index + 1} - {data.title}
@@ -23,7 +23,7 @@ export default function ItemList({ items, setItems }: ItemList) {
 
       <Button
         title="Delete"
-        className="bg-blue-500 hover:bg-red-500 text-white h-7"
+        className="bg-blue-500 hover:bg-red-400 text-white h-7"
         onClick={() => handleDelete(data.id)}
       ></Button>
     </div>

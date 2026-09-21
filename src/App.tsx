@@ -32,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center bg-gradient-to-br from-indigo-700 via-white to-blue-400">
+    <div className="h-screen flex flex-col items-center bg-linear-to-tl from-blue-400 via-white to-blue-400">
       <div className="w-87.5 pt-10">
         <ImageHeader></ImageHeader>
         <form onSubmit={handlerSubmit} className="mb-5">
