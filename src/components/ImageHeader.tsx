@@ -1,6 +1,7 @@
 import reactsvg from "../assets/react.svg";
 import tssvg from "../assets/typescript.svg";
 import vitesvg from "../assets/vite.svg";
+import Clock from "./Clock";
 
 export default function ImageHeader() {
   return (
@@ -8,6 +9,7 @@ export default function ImageHeader() {
       <h1 className="h-10 font-bold text-center text-3xl text-black">
         Task Flow
       </h1>
+      <Clock></Clock>
       <div className="flex items-center justify-center">
         <img
           className="w-20 h-28 object-contain"
