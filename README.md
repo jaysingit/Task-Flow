@@ -18,6 +18,7 @@ A simple, single-page todo list app built with React, TypeScript, and Tailwind C
 - [Vite](https://vite.dev/) for dev server and build tooling
 - [Tailwind CSS v4](https://tailwindcss.com/) for styling
 - [React Compiler](https://react.dev/learn/react-compiler) (via Babel plugin) for automatic memoization
+- [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for unit/component testing
 
 ## Getting Started
 
@@ -51,6 +52,16 @@ Lint the project:
 npm run lint
 ```
 
+Run the test suite:
+
+```bash
+npm test
+```
+
+## Deployment
+
+Pushes to `main` are automatically built and published to GitHub Pages via a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+
 ## Project Structure
 
 ```
@@ -63,4 +74,7 @@ src/
     ItemList.tsx            # Renders the task list with delete actions
   types/
     utils.ts                # Shared TypeScript types (Items, ReactSetState)
+  Tests/
+    App.test.tsx             # Component tests for App (validation, add, delete, reset)
+  setupTests.ts             # Vitest setup (jest-dom matchers)
 ```
