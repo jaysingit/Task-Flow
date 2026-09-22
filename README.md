@@ -11,6 +11,8 @@ A simple, single-page todo list app built with React, TypeScript, and Tailwind C
 - Delete individual tasks
 - Auto-numbered task list (1, 2, 3, ...)
 - Fixed header (title, images, input, and action buttons) with an independently scrollable task list below it
+- Live clock in the header, updating every second
+- Tech-stack logos in the header with hover tooltips (React, TypeScript, Tailwind CSS, Vite)
 
 ## Tech Stack
 
@@ -68,7 +70,9 @@ Pushes to `main` are automatically built and published to GitHub Pages via a Git
 src/
   App.tsx                  # Root component: state, form submission, layout
   components/
-    ImageHeader.tsx         # Title and header images
+    ImageHeader.tsx         # Title, live clock, and tech-stack logos
+    Logo.tsx                 # Single tech-stack logo image with tooltip
+    Clock.tsx                 # Live-updating digital clock
     Input.tsx               # Controlled text input for new tasks
     Button.tsx              # Reusable button (submit/reset/button)
     ItemList.tsx            # Renders the task list with delete actions
